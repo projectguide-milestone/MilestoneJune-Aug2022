@@ -1,0 +1,99 @@
+.box2{
+    box-sizing: border-box;
+    width: 360px;
+    height: 600px;
+    border: 2px solid #3498db;
+    box-shadow: -3px -3px 7px #ffffff73,
+                3px 3px 5px rgba(94, 104, 121, 0.288);
+    border-radius: 5px;
+    background-color: black;
+    margin-top: 50px;
+    overflow: hidden;
+    transition: all 1s;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif;
+}
+.kppp{
+    color: white;
+    padding: 35px;
+}
+
+
+.img555{
+    box-sizing: border-box;
+    width: 149px;
+    height: 149px;
+    border-radius: 10%;
+    margin: 0;
+    border: 5px solid #0082e6;
+    padding: 3px;
+    background-color: white;
+}
+
+.bthh{
+    border: 3px solid rgb(94, 217, 244);
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 0px;
+    transition: all 0.3s;
+}
+
+.bthh:hover{
+    transform: scale(1.1);
+}
+
+.box2:hover{
+    width: 360px;
+    height: 600px;
+    border-radius: 5px;
+}
+
+.lbb{
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid #3498db;
+    padding: 2px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.lbb:hover{
+    background-color: #3498db;
+    color: black;
+}
+
+.khemraj input[type="text"],
+.khemraj input[type="email"],
+.khemraj input[type="password"]{
+    display: block;
+    box-sizing: border-box;
+    background: none;
+    color: #3498db;
+    margin-bottom: 30px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #0082e6;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+.khemraj input[type="text"],
+.khemraj input[type="password"]{
+    margin-top: 25px;
+}
+.khemraj input[type="text"]:focus,
+.khemraj input[type="email"]:focus,
+.khemraj input[type="password"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color: #3498db;
+    transition: 0.2s ease;
+}

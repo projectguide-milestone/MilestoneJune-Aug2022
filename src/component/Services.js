@@ -1,11 +1,11 @@
 import React from 'react'
-import { BsFillArrowLeftSquareFill } from "react-icons/bs";
-import {useNavigate} from 'react-router-dom';
+// import { BsFillArrowLeftSquareFill } from "react-icons/bs";
+// import {useNavigate} from 'react-router-dom';
 
 
 export const Services = () => {
 
-  const history = useNavigate();
+//   const history = useNavigate();
 
   return (
 
@@ -15,15 +15,15 @@ export const Services = () => {
             <form>
                 <div className="form-row">
                     <div className="form-group col-md-6">
-                        <label>Client Name :&nbsp;&nbsp;
+                        <label>Advertising agent :&nbsp;&nbsp;
                             <input type="text" name="ClientName"></input>
                         </label>
                     </div>
                 </div>
                 <br/><br/>
-                <div className="form-row">
+                {/* <div className="form-row">
                     <BsFillArrowLeftSquareFill color="aqua" fontSize={40} onClick={() => history('/home')}></BsFillArrowLeftSquareFill>
-                </div>
+                </div> */}
             </form>
         </div>
         </center>
