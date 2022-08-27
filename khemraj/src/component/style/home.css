@@ -1,0 +1,76 @@
+.khem form h1{
+    color: rgb(7, 87, 158);
+    font-size: 40px;
+
+}
+.hopi{
+    height: 200px;
+    width: 200px;
+}
+.khem form h2{
+    text-align:left;
+    font-size: 30px;
+    padding-left: 200px;
+    font-family: cursive;
+}
+.log{
+    padding-left: 90%;
+}
+.logout{
+    height: 40px;
+    width: 90px;
+    background-color:rgb(100, 251, 163);
+    color: black;
+    transition: 0.3s;
+}
+
+
+.logout:hover{
+    color: aqua;
+    background-color: black;
+    transition: 0.3s;
+
+}
+
+.khem5{
+    height: 80px;
+    width: 100px;
+    color: aliceblue;
+}
+
+.khem6{
+    height: 80px;
+    width: 100px;
+    padding-left: 270px;
+    color: aliceblue;
+    padding-top: 250px;
+}
+
+.tbh{
+    color: rgb(29, 212, 236);
+}
+.as{
+    color: rgb(144, 200, 250);
+    cursor: pointer;
+}
+
+.tbh1{
+    color: aliceblue;
+}
+
+.xyz{
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.pro{
+    color: rgb(144, 200, 250);
+    cursor: pointer;
+    font-size: 30px;
+    font-family:cursive ;
+}
+
+.pro1{
+    padding-left: 200px;
+}
+
