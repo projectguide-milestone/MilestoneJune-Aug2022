@@ -1,0 +1,11 @@
+.wpk{
+    /* width: 800px; */
+    padding-left: 350px;
+    padding-right: 400px;
+    padding-top: 50px;
+}
+
+.ohk{
+    box-shadow: 10px 10px 8px #888888;
+    text-align: center;
+}

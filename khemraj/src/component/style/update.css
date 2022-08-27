@@ -1,0 +1,19 @@
+.form-row{
+    /* padding: 50px; */
+    /* color: white; */
+    height: 200px;
+    width: 450px;
+    padding-left: 50px;
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+.form-group {
+    padding-top: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-group3 {
+    padding-top: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}   
