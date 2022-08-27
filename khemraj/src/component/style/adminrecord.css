@@ -1,0 +1,41 @@
+.khem11 button {
+    margin-top: 0px;
+    width: 190px;
+    height: 40px;
+    border: none;
+    background-color:rgb(121, 181, 242);
+    color: black;
+    font-size: 17px;
+    cursor: pointer;
+    border: 3px solid rgb(94, 217, 244);
+  }
+  .khem11 button:hover{
+    background-color:rgb(26, 3, 119);
+    color: aqua;
+  }
+
+
+.head1{
+    width: 250px;
+}
+
+.khem11{
+  padding: 50px;
+}
+
+
+  .abcef{
+    color: black;
+    width: 250px;
+    text-align: center;
+  }
+
+  .abc122{
+    color: rgb(203, 57, 20);
+    text-align: center;
+  }
+
+  .formgg22{
+    padding-left: 180px;
+    padding-top: 20px;
+  }
