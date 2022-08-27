@@ -1,0 +1,18 @@
+.input{
+    border-radius: 10px;
+    font-family:cursive;
+}
+
+.sip{
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+.sip:hover{
+    background-color: aquamarine;
+    transition: 0.3s;
+}
+
+.sip1{
+    padding-left: 300px;
+}
