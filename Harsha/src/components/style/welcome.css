@@ -1,0 +1,33 @@
+#ma{
+    padding-left: 500px ;
+    padding-top: 50px;
+    
+}
+
+
+#ma1{
+    /* padding: 120px; */
+    padding-left: 80px;
+    padding-top: 150px;
+    background-color: antiquewhite;
+    width: 550px;
+height: 450px;
+background-image: url('../th.jpg');
+background-size: cover;
+}
+
+.bt{
+    background-color: #3e7b40;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.lgb1{
+    padding-left: 250px;
+}

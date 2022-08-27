@@ -1,0 +1,65 @@
+.back{
+    background-image: url(../images/BMW.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+  
+}
+.kkback{
+    height: 100%;
+}
+
+.harr{
+    background-color: #0082e6  ;
+    color: aqua;
+    
+    width: 190px;
+    height: 40px;
+    border-radius: 35px;
+   }
+   
+   .harr:hover{
+     background-color: aqua;
+     color: #0082e6;
+   }
+
+
+   .har1{
+    padding: 50px;
+   }
+
+
+   .h1{
+    color: aqua;
+   }
+
+   .log{
+    padding-left: 90%;
+    padding-top: 20px;
+   }
+
+
+   .log1{
+border-radius: 50% ;
+width: 60px;
+height: 50px;
+font-size: 15px;
+color: red;
+background-color: rgb(155, 238, 130);
+transition: 0.3s;
+
+   }
+
+
+   .log1:hover{
+    color: rgb(84, 40, 196);
+    background-color: rgb(17, 189, 49);
+    height: 60px;
+    width: 70px;
+    transition: 0.3s;
+   }
+
+
+   .asset{
+    width: 500px;
+    padding-left: 20px;
+   }
