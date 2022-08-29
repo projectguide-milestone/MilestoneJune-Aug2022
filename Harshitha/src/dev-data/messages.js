@@ -1,0 +1,32 @@
+export const messages = [
+  {
+    id: 1,
+    from: "Kevin Caster",
+    to: 3,
+    body: "",
+    read: true,
+    emailFrom: "kevin@gmail.com",
+    phone: 8618574713,
+    title: "Interested in The Apartment for Sale",
+  },
+  {
+    id: 2,
+    from: "Joram Davies",
+    to: 3,
+    body: "",
+    read: true,
+    emailFrom: "joram@gmail.com",
+    phone: 9606884466,
+    title: "Interested in The House for Sell",
+  },
+  {
+    id: 3,
+    from: "Priscilla Johnson",
+    to: 3,
+    body: "",
+    read: true,
+    emailFrom: "priscilla@gmail.com",
+    phone: 8880866966,
+    title: "Interested in The House for Sell ",
+  },
+];
