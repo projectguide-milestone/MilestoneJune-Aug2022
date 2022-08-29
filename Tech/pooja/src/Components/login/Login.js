@@ -65,9 +65,9 @@ const Login = () => {
                 <input onChange={(e)=>{setUsername(e.target.value)}} placeholder='UserName'></input>
                 <label>Password</label>
                 <input type="password" onChange={(e)=>{setPassword(e.target.value)}} placeholder='Password'></input>
-                
+                <Link to='/admin'>
                 <Button onClick={userLogin} className='primary-btn'> Login </Button>
-                
+                </Link>
                 <p>
                 Don't have account? <Link to='/register'>Signup!</Link>
               </p>
