@@ -2,9 +2,13 @@ import React, {useState, useEffect} from 'react';
 import './style/Record.css'
 import {Table,} from 'react-bootstrap';
 import Axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 
 export const Record = () => {
+
+    const history = useNavigate();
 
     
   const [data, setData] = useState([]);
@@ -76,7 +80,7 @@ export const Record = () => {
                  </div>
                  <br/><br/>
                  <div className="form-row">
-                    {/* <BsFillArrowLeftSquareFill color="green" fontSize={50} onClick={() => history('/Services')}></BsFillArrowLeftSquareFill> */}
+                    <BsFillArrowLeftSquareFill color="green" fontSize={50} onClick={() => history('/home')}></BsFillArrowLeftSquareFill>
                 </div>
                  {/* <button>ok 😃</button> */}
                  </center>

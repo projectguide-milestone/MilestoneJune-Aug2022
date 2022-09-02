@@ -41,6 +41,7 @@
 import React from 'react'
 import Axios from 'axios'
 import {useState, useEffect} from 'react';
+import '../component/style/Record.css'
 
 
 const Reply = () => {
@@ -60,7 +61,7 @@ const Reply = () => {
 
   return (
     <div>
-          <h1>Reply will be displayed here :</h1>
+          <h1>Product Details :</h1>
            <div>
     {
              data.map(clientdata => {
@@ -76,6 +77,7 @@ const Reply = () => {
                          <h3>{clientdata.product_name}</h3>
                               <p class="card-text">{clientdata.product_dec}</p>
                               <p class="card-text">agent:  {clientdata.agent}</p>
+                              <label><span className='span'><b>Status: </b></span><span className='span1'>{clientdata.aprove}</span></label>
                      </div>
                  </div>
              </div>

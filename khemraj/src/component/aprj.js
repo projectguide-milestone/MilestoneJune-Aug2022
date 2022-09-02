@@ -26,6 +26,7 @@ const Aprj = () => {
         <h1 className='status1'>Status</h1>
         <label className='status'>status:</label>
         <select  onChange={(event)=>{setAprove(event.target.value)}} className='pranjal'>
+            <option>--select--</option>
             <option>Aprove</option>
             <option className='reject'>Reject</option>
             </select><br></br><br></br>

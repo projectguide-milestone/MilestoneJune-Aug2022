@@ -4,11 +4,13 @@ import Axios from 'axios'
 import {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+// import { BsFillArrowLeftSquareFill } from "react-icons/bs";
+
 
 import {
     FaBuromobelexperte,
      FaAdn,
-    FaRegChartBar,
+    // FaRegChartBar,
       FaPager,
     FaBars,
     FaThList
@@ -19,6 +21,9 @@ import pic1 from '../component/pizzaparty1.png'
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 
 const Sidebar = ({children}) => {
+
+
+
         const[isOpen ,setIsOpen] = useState(false);
         const toggle = () => setIsOpen(!isOpen);
 
@@ -33,11 +38,11 @@ const Sidebar = ({children}) => {
             name:"Agent",
             icon:< FaAdn/>
         },
-        {
-            path:"/adminrecord",
-            name:"User Records",
-            icon:<FaRegChartBar/>
-        },
+        // {
+        //     path:"/adminrecord",
+        //     name:"User Records",
+        //     icon:<FaRegChartBar/>
+        // },
         {
             path:"/adminpayment",
             name:"Payment",
@@ -52,7 +57,8 @@ const Sidebar = ({children}) => {
             path:"/admincontact",
             name:"Contact Us",
             icon:<ContactPageIcon/>
-        }
+        },
+
     ]
 
 
@@ -91,7 +97,7 @@ const Sidebar = ({children}) => {
         </div>
         <main>{children}
     <div>
-           admin home
+        
            {
                     data.map(clientdata => {
                         return(
@@ -109,6 +115,12 @@ const Sidebar = ({children}) => {
                                      {/* <p>about co....</p> */}
                                      <button  onClick={() => history(`/aprj/${clientdata.id}`)}  value="Aprove" className='pranjal'>Status form</button><br></br><br></br>
                                      {/* <button  onChange={() => history(`/aprj/${clientdata.id}`)}  value="Reject" className='pranjal1'>Reject</button> */}
+{/* 
+                                     <div className="formgg22">
+                <div className="formgg22">
+                    <BsFillArrowLeftSquareFill color="aqua" fontSize={40} onClick={() => history('/adminhome')}></BsFillArrowLeftSquareFill>
+                </div>
+            </div> */}
                             </div>
                         </div>
                     </div>

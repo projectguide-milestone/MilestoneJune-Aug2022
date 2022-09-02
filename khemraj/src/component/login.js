@@ -3,8 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './style/login.css'
 import  profile from "./5087579.png";
 import  Axios from 'axios';
-import { useState, useEffect } from 'react';
-
+import { useState } from 'react';
 
 
 
@@ -14,14 +13,15 @@ export const Login = () => {
 
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [loginStatus, setLoginStatus] = useState("");
+  
+  // const [loginStatus, setLoginStatus] = useState("");
   // const [disable, setDisable] = useState(0);
 
 
   Axios.defaults.withCredentials = true;
 
   const userLogin = () => {
-    Axios.post('http://localhost:3001/login', {
+    Axios.post('http://localhost:3001/userLogin', {
         name: name,
         password: password
     }).then((response) => {
@@ -88,7 +88,7 @@ const display = () => {
               </p>
             
           </div>
-          <h1>{loginStatus}</h1>
+          {/* <h1>{loginStatus}</h1> */}
           <h1>{display}</h1>
 
         </div>

@@ -7,3 +7,24 @@
     padding-left: 520px;
     padding-bottom: 20px;
 }
+
+.net{
+    width: 180px;
+    height: 30px;
+    font-size: 18px;
+    background-color: rgb(35, 157, 47);
+}
+
+.net1{
+    padding-left: 200px;
+}
+
+.click{
+    font-family: cursive;
+    font-size: 20px;
+}
+
+
+.netbank{
+    padding-left: 230px;
+}

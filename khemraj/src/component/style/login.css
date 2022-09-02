@@ -61,6 +61,17 @@
     padding: 14px 0 0 25px;
 }
 
+.img5555{
+    box-sizing: border-box;
+    width: 149px;
+    height: 149px;
+    border-radius: 10%;
+    margin: 0;
+    border: 5px solid #0082e6;
+    padding: 3px;
+    background-color: white;
+}
+
 .name3 .name{
     padding-left: 70px;
     font-size: 20px;
@@ -118,4 +129,19 @@ button:disabled{
     padding: 10px 20px;
     font-size: 18px;
     background-color: gray;
+}
+
+
+#signInDiv{
+    padding-top: 18%;
+    padding-left: 500px;
+}
+
+.nnn{
+padding-top: 20px;
+}
+
+
+.imgmain{
+    padding-left: 300px;
 }

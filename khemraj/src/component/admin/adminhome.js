@@ -7,7 +7,9 @@ import '../style/adminhome.css'
 const Adminhome = () => {
 
   
+  
   return (
+    
     <div>
       <Sidebar />
     </div>
