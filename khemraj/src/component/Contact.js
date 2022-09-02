@@ -52,17 +52,17 @@ const ContactForm = () => {
             
 
       <div>
-        <input type="text" onChange={(event)=>{setName(event.target.value)}} placeholder="Your name" classname="cvcv" required ></input>
+       <span className="span">Name:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" onChange={(event)=>{setName(event.target.value)}} placeholder="Your name" id="cvcv" className="cvcv" required ></input>
       </div>
-      <div className="sub5">
-        <input type="email" onChange={(event)=>{setEmail(event.target.value)}} placeholder="Email" classname="cvcv" required ></input>
+      <div className="sub8">
+       <span className="span">Email: </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" onChange={(event)=>{setEmail(event.target.value)}} placeholder="Email" id="cvcv" className="cvcv" required ></input>
       </div>
-      <div >
-        <textarea onChange={(event)=>{setMessage(event.target.value)}} placeholder="Your message" classname="cvcv" required ></textarea>
+      <div className="sub8">
+       <span className="span">Message:</span> <textarea onChange={(event)=>{setMessage(event.target.value)}} placeholder="Your message" id="cvcv" className="cvcv" required ></textarea>
       </div>
-      <div>
+      <div className="kbutt">
         
-        <button onClick={sendname} className="bb but"> Send a message </button>
+        <button onClick={sendname} className="bbbut"> Send a message </button>
       </div>
       </div>
       <div className="pic"><img src={pic} alt="Paris" className="img"/></div>

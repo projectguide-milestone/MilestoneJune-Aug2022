@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './style/welcome.css'
+import pic from './pizzaparty1.png'
 
 export const Welcome = () => {
   return (
@@ -10,11 +11,15 @@ export const Welcome = () => {
 </div>
 <div className="ww">
     <div class="welcome">
-      <Link to="/login">
-         <button type="submit" classname="bkhem">User login</button></Link>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='yy'></span>
-         <Link to="/adminlogin">
-         <button type="submit" classname="bkhem2">Admin login</button></Link>
+    <img src={pic} alt='' className='img12'></img>
+    <span className='yy'></span>
+
+      <Link to="/google">
+         <button type="submit" classname="bkhem">login here</button>
+         </Link>
+
+         {/* <Link to="/adminlogin">
+         <button type="submit" classname="bkhem2">Admin login</button></Link> */}
       
      </div>
      </div>

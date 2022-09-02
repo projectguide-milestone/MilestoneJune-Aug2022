@@ -33,6 +33,9 @@ import Adminpayment from './component/admin/adminpayment';
 import Success from './component/success';
 import Aprj from './component/aprj';
 import  Reply from './component/reply'
+import Netbanking from './component/netbanking';
+import Google from './component/google';
+import Paydetails from './component/paydetails';
 
 
 function App() {
@@ -42,6 +45,7 @@ function App() {
        <Navbar/>
      
         <Routes>
+        <Route path='/google' element={<Google></Google>}></Route>
         <Route path='/' element={<Welcome></Welcome>}></Route>
         <Route path='/home' element= {<Home></Home>}></Route>
         <Route path='/Contact' element={<Contact></Contact>}></Route>
@@ -74,10 +78,8 @@ function App() {
         <Route path='/success' element={<Success></Success>}></Route>
         <Route path='/reply' element={<Reply></Reply>}></Route>
         <Route path={`/aprj/:id`} element={<Aprj></Aprj>}></Route>
-
-
-
-        
+        <Route path='/netbanking' element={<Netbanking></Netbanking>}></Route>
+        <Route path='/paydetails' element={<Paydetails></Paydetails>}></Route>
 
 
         

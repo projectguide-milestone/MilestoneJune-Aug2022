@@ -1,13 +1,16 @@
 import React from 'react';
 import './style/home.css';
-import {Link} from 'react-router-dom'
-// import pic from '../component/pizzaparty1.png'
+// import {Link} from 'react-router-dom'
 import pic1 from '../component/download.jpg'
 import pic2 from '../component/images.jpg'
 import pic3 from '../component/images1.jpg'
 
 
 export const Home = () => {
+
+ var key= localStorage.getItem('key')
+ console.log(key)
+
   return(
     
     <div className="khem">
@@ -16,18 +19,23 @@ export const Home = () => {
         {/* <marquee> */}
           <h1>Advertising Source Service</h1> 
           {/* </marquee> */}
-          <div className='log'>
-         <Link to="/login">
-          <button className='logout'>Logout</button></Link></div>
+          {/* <div className='log'>
 
-        <div className='pro1'>
+            
+         <Link to="/login">
+          <button className='logout'>Logout</button></Link></div> */}
+
+        {/* <div className='pro1'>
           <a href="profile" className="pro"><p><li>Profile</li></p></a>
-          </div>
+          </div> */}
           <h2>
             <a href="Record" className="as"><p><li>Agent</li></p></a>
           </h2>
           <h2>
-            <a href="reply" className="as"><p><li>Your product reply's</li></p></a>
+            <a href="reply" className="as"><p><li>Your product Details</li></p></a>
+          </h2>
+          <h2>
+            <a href="paydetails" className="as"><p><li>Payment Details</li></p></a>
           </h2>
           {/* <img className='hopi' src={pic} alt=""></img> */}
         </form>
@@ -41,13 +49,12 @@ export const Home = () => {
   <img src={pic1} class="card-img-top card-image" alt="..." />
   <div class="card-body ms-1">
     <h3>Major Advertised</h3>
-    <p class="card-text">Facebook co.</p>
-<p>about co....</p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+    <h4 class="card-text">Facebook co.</h4>
+<p>Your Facebook business Page is a free way for businesses, brands, celebrities, 
+  causes and organisations to reach their audience. While Facebook profiles can be private, Pages are public.
+   Google may index your Page, making it easier for people to find you.</p>
+   <p>You can manage your Page on Facebook and platforms such as Meta Business Suite and Creator Studio on your desktop and mobile device.</p>
+
   </div>
 </div>
           </div>
@@ -56,13 +63,11 @@ export const Home = () => {
   <img src={pic2} class="card-img-top card-image" alt="..." />
   <div class="card-body ms-1">
   <h3>Most Advertised</h3>
-    <p class="card-text">ebay co.</p>
-<p>about co....</p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+    <h4 class="card-text">ebay co.</h4>
+<p> eBay is a multibillion-dollar business with operations in about 32 countries, as of 2019.
+   The company manages the eBay website, an online auction and shopping website in which people and businesses buy and sell a wide variety of goods and services worldwide. </p>
+<p> The website is free to use for buyers, but sellers are charged fees for listing items after a limited number of free listings, and an additional or separate fee when those items are sold</p>
+<p>In addition to eBay's original auction-style sales, the website has evolved and expanded to include: instant "Buy It Now" shopping</p>
      </div>
 </div>
           </div>
@@ -72,13 +77,9 @@ export const Home = () => {
   <img src={pic3} class="card-img-top card-image" alt="..." />
   <div class="card-body ms-1">
   <h3>Up coming Advertising Agent</h3>
-    <p class="card-text">🥳</p>
-<p>coming soon....</p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+    <h2 class="card-text">🥳</h2>
+<h4>coming soon....</h4>
+
      </div>
 </div>
           </div>

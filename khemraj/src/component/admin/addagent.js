@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios' 
+import '../style/details.css'
 
 
 const Addagent = () => {
@@ -11,16 +13,19 @@ const Addagent = () => {
 
   const [agent_id, setAgent_id] = useState("")
 
+  const history = useNavigate();
 
   const addagent =() =>{
-      axios.post('http://localhost:3001/createagent',{
-          id:id,
-          name:name,
-          agent_id:agent_id
-      }).then((response) => {
-          alert ("updated")
-      })
-
+    if(name !== '' && agent_id !== ''){
+        axios.post('http://localhost:3001/createagent',{
+            id:id,
+            name:name,
+            agent_id:agent_id
+        }).then(() => {
+            alert ("updated")
+            history.push('/adminagent')
+        })
+    }else { alert ("every field is required")}
   }
 
 return (
@@ -28,21 +33,20 @@ return (
       
       <form>
               <div className="form-row">
-                  <div className="form-group">
+                  <div className="out">
                       <label>Agent Name:
-                          <input type="text" classname="ClientId" onChange={(event)=>{setName(event.target.value)}}></input>
+                          <input type="text" classname="out" onChange={(event)=>{setName(event.target.value)}}></input>
                       </label>
                   </div>
-                  <div className="form-group">
+                  <div className="out">
                       <label>Agent id:
-                          <input type="text" classname="ClientId" onChange={(event)=>{setAgent_id(event.target.value)}}></input>
+                          <input type="text" classname="out" onChange={(event)=>{setAgent_id(event.target.value)}}></input>
                       </label>
                   </div>
               </div>
               <div className="form-row">
                   <div className="form-group3">
-                    <Link to="/adminagent">
-                      <button onClick={addagent} >ADD</button></Link>
+                      <button onClick={addagent} className="but1">ADD</button>
                   </div>
               </div>
           </form>

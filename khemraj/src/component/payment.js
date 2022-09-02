@@ -2,6 +2,7 @@ import React from 'react'
 import Axios from 'axios';
 import {useState} from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../component/style/payment.css'
 
 const Payment = () => {
@@ -27,30 +28,44 @@ const Payment = () => {
   const [ifsc, setIfsc] = useState("");
   const [bname, setBname] = useState("");
 
+  const history = useNavigate();
 
   const addnet = () => {
-    Axios.post('http://localhost:3001/netpayment', {
-        usname: usname,
-        accno: accno,
-        ifsc: ifsc,
-        bname: bname
-
-    }).then(() => {
-        console.log('Successfully created client record.')
-    }); 
-}
-
-  const addpay = () => {
-      Axios.post('http://localhost:3001/payment', {
-          name: name,
-          phone_no: phone_no,
-          email: email,
-          pmode: pmode,
-          uname: uname,
-          upi: upi
+    if (usname !== '' && accno !== ''){
+      if (ifsc !== '' && bname !==''){
+        Axios.post('http://localhost:3001/netpayment', {
+          usname: usname,
+          accno: accno,
+          ifsc: ifsc,
+          bname: bname
+  
       }).then(() => {
           console.log('Successfully created client record.')
       }); 
+      }else { alert ("ifsc r bname is required ")}
+    }else {  alert ("every filed is required")}
+
+}
+
+  const addpay = () => {
+    if (name !=='' && phone_no !==''){
+      if(email !=='' && pmode !==''){
+        if(uname !=='' && upi !==''){
+          Axios.post('http://localhost:3001/payment', {
+            name: name,
+            phone_no: phone_no,
+            email: email,
+            pmode: pmode,
+            uname: uname,
+            upi: upi
+        }).then(() => {
+            console.log('Successfully created client record.')
+            history.push('/success')
+        }); 
+        }else {  alert ("every filed is required")}
+      }else {  alert ("every filed is required")}
+    }else {  alert ("every filed is required 111 ")}
+     
   }
 
 
@@ -91,29 +106,29 @@ const Payment = () => {
             <label>Payment Mode:</label>
               <select onClick={(e)=>(handleshow(e))} className='qwe' onChange={(event)=> {setPmode(event.target.value)}} required>
                 <option value="">--select payment mode--</option>
-                <option value="1">Google pay</option>
-                <option value="2">Phone pay</option>
-                <option value="3">Net Banking</option>
-                <option value="4">Tez</option>
+                <option value="Google pay">Google pay</option>
+                <option value="Phone pay">Phone pay</option>
+                <option value="Net banking">Net Banking</option>
+                <option value="Tez">Tez</option>
               </select>
             </div>
 
 
 {
-              show==='1' && (
+              show==='Google pay' && (
                 <div>
                   <label>user name:</label>
                   <input className='qwe'onChange={(event)=> {setUname(event.target.value)}} placeholder='name'required></input><br/>
                   <label>UPI ID:</label>
                   <input className='qwe' onChange={(event)=> {setUpi(event.target.value)}} placeholder='UPI ID'required></input>
                   <label>Amount to be paid :</label>
-                  <label className='qwe11' placeholder='5000'>Rs.5000/-</label>
+                  <label className='qwe11'>Rs.5000/-</label>
                 </div>
               )
             }
 
 {
-              show==='2' && (
+              show==='Phone pay' && (
                 <div>
                   <label>user name:</label>
                   <input className='qwe'onChange={(event)=> {setUname(event.target.value)}}  placeholder='name'required></input><br/>
@@ -121,14 +136,14 @@ const Payment = () => {
                   <input className='qwe' onChange={(event)=> {setUpi(event.target.value)}} placeholder='Phone Pay UPI ID'required></input>
                   <br/>
                   <label>Amount to be paid :</label>
-                  <label className='qwe11' placeholder='5000'>Rs.5000/-</label>
+                  <label className='qwe11'>Rs.5000/-</label>
                 </div>
               )
             }
 
             
 {
-              show==='3' && (
+              show==='Net banking' && (
                 <div>
                   <label> user name:</label>
                   <input className='qwe' placeholder='name' onChange={(event)=> {setUsname(event.target.value)}} required></input><br/>
@@ -147,21 +162,24 @@ const Payment = () => {
                     <option>Corparation</option>
                   </select>
                   <label>Amount to be paid :</label>
-                  <label className='qwe11' placeholder='5000'>Rs.5000/-</label>
+                  <label className='qwe11'>Rs.5000/-</label>
+                  <div>
+                    <button onClick={addnet}>ok</button>
+                  </div>
                 </div>
               )
             }
 
 
 {
-              show==='4' && (
+              show==='Tez' && (
                 <div>
                   <label>user name:</label>
                   <input className='qwe'onChange={(event)=> {setUname(event.target.value)}}  placeholder='name'required></input><br/>
                   <label>Tez ID:</label>
                   <input className='qwe' onChange={(event)=> {setUpi(event.target.value)}}  placeholder='UPI ID'required></input>
                   <label>Amount to be paid :</label>
-                  <label className='qwe11' placeholder='5000'>Rs.5000/-</label>
+                  <label className='qwe11'>Rs.5000/-</label>
                 </div>
               )
             }
@@ -173,9 +191,10 @@ const Payment = () => {
 
             <div className='tyu'>
               <Link to="/success">
-              <button onChange={addnet} onClick={addpay}>submit</button></Link>
+              <button onClick={addpay}>submit</button>
+              </Link>
 
-              <button onClick={addnet}>ok</button>
+              {/* <button onClick={addnet}>ok</button> */}
             </div>
           </form>
         </div>

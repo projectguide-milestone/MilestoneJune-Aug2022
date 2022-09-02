@@ -13,7 +13,15 @@ body{
 }
 
 .bbbut{
-  height: 50px;
+  height: 38px;
+  font-size: 22px;
+  width: 180px;
+  background-color: rgb(47, 164, 47);
+}
+
+.kbutt{
+  padding-top: 22px;
+  padding-left: 100px;
 }
 
 
@@ -49,7 +57,7 @@ body{
     height: 500%;
     padding: 30px;
     padding-top: 10px;
-  }
+  } 
   
 .form22 input{
   width: 20%;
@@ -129,6 +137,10 @@ border: 3px solid rgb(244, 94, 94) ;
   padding-top: 25px;
 }
 
+.sub8{
+  padding-top: 20px;
+}
+
 
   .img {
     border: 3px solid rgb(94, 217, 244);
@@ -145,3 +157,14 @@ border: 3px solid rgb(244, 94, 94) ;
     color: green;
   }
 
+  #cvcv{
+     border-radius: 10px;
+     height: 38px;
+  }
+
+  .cvcv{
+    font-family: cursive;
+    width: 200px;
+    padding-left: 15px;
+
+  }

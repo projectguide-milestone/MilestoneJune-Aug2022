@@ -13,6 +13,45 @@
     display: flex;
 }
 
+.advtmain{
+    padding: 80px;
+}
+
+.profil11 {
+    background-color: rgb(191, 232, 240);
+    border-radius: 10px;
+    width: 475px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+
+    display: flex;
+}
+
+.profilS {
+    background-color: rgb(191, 232, 240);
+    border-radius: 10px;
+    width: 410px;
+    height: 200px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 40px;
+    display: flex;
+}
+
+.sucess{
+    padding: 150px;
+}
+
+
+.inp{
+    border-radius: 7px;
+}
+
+.select{
+    padding-top: 30px;
+}
 
 .pk{
     color: red;
@@ -58,6 +97,41 @@
   padding-left: 20px;
 
 }
+.but{
+    background-color: rgb(215, 92, 71);
+    font-family: cursive;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.but:hover{
+    background-color: rgb(34, 156, 63);
+    font-family:monospace;
+    border-radius: 50px;
+    transition: 0.3s;
+
+}
+
+.but1{
+    background-color: rgb(215, 92, 71);
+    font-family: cursive;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.but1:hover{
+    background-color: rgb(34, 156, 63);
+    font-family:monospace;
+    border-radius: 50px;
+    transition: 0.4s;
+
+}
+
+
+.page{
+    padding-top: 35px;
+}
+
 
 
 /* 
