@@ -24,7 +24,7 @@ const Updateagent = () => {
                 history.push('/adminagent')
             })
         }else { alert("Every Filed is required")}
-
+alert("Agent Updated : "+name)
     }
 
 
@@ -32,22 +32,22 @@ const Updateagent = () => {
   return (
     <div>
         
-    <form>
+    <form action='/adminagent'>
             <div className="form-row">
                 <div className="out">
                     <label> Name:
-                        <input type="text" classname="out" onChange={(event)=>{setName(event.target.value)}}></input>
+                        <input type="text" classname="out" onChange={(event)=>{setName(event.target.value)}} required></input>
                     </label>
                 </div>
                 <div className="out">
                     <label>Agent id:
-                        <input type="text" classname="out" onChange={(event)=>{setAgent_id(event.target.value)}}></input>
+                        <input type="text" classname="out" onChange={(event)=>{setAgent_id(event.target.value)}} required></input>
                     </label>
                 </div>
             </div>
             <div className="form-row">
                 <div className="form-group3">
-                    <button onClick={updateagent1} >Update</button>
+                    <button type='submit' onClick={updateagent1} >Update</button>
                 </div>
             </div>
         </form>

@@ -4,13 +4,12 @@ import Axios from 'axios'
 import {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-// import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 
 import {
     FaBuromobelexperte,
      FaAdn,
-    // FaRegChartBar,
+    FaRegChartBar,
       FaPager,
     FaBars,
     FaThList
@@ -38,15 +37,16 @@ const Sidebar = ({children}) => {
             name:"Agent",
             icon:< FaAdn/>
         },
-        // {
-        //     path:"/adminrecord",
-        //     name:"User Records",
-        //     icon:<FaRegChartBar/>
-        // },
+   
         {
             path:"/adminpayment",
             name:"Payment",
             icon:<  FaPager/>
+        },
+        {
+            path:"/netbanking",
+            name:"Net Banking",
+            icon:<FaRegChartBar/>
         },
         {
             path:"/About",
@@ -112,15 +112,9 @@ const Sidebar = ({children}) => {
                                 <h3>{clientdata.product_name}</h3>
                                      <p class="card-text">{clientdata.product_dec}</p>
                                      <p class="card-text">agent:  {clientdata.agent}</p>
-                                     {/* <p>about co....</p> */}
+                                     <p class="card-text">Status:  {clientdata.aprove}</p>
                                      <button  onClick={() => history(`/aprj/${clientdata.id}`)}  value="Aprove" className='pranjal'>Status form</button><br></br><br></br>
-                                     {/* <button  onChange={() => history(`/aprj/${clientdata.id}`)}  value="Reject" className='pranjal1'>Reject</button> */}
-{/* 
-                                     <div className="formgg22">
-                <div className="formgg22">
-                    <BsFillArrowLeftSquareFill color="aqua" fontSize={40} onClick={() => history('/adminhome')}></BsFillArrowLeftSquareFill>
-                </div>
-            </div> */}
+
                             </div>
                         </div>
                     </div>

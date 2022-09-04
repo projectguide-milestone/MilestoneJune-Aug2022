@@ -1,6 +1,5 @@
 import React from 'react'
 import './style/about.css'
-// import profile from '../component/IMG.jpg'
 
 export const About = () => {
   return (
@@ -16,16 +15,7 @@ export const About = () => {
 <div classname="row4">
   <div classname="column4">
     <div classname="card">
-      {/* <div className='imme'>
-      <img src={profile} alt="Jane" className='im' /></div>
-      <div classname="container4">
-        <h2 className='hh'>KHEMRAJ</h2>
-        <p className='pry'><li>CEO & Founder</li></p>
-        <p className='pry'><li> He is from Bangalore and He is working in software development company from past 6 years. </li></p>
-        <p className='pry'><li>khemraj8151@gmail.com</li></p>
-        <p className='pry'><li>Address: laggere main road, Bangalore 560058</li></p>
-   
-      </div> */}
+
     </div>
   </div>
 <div>

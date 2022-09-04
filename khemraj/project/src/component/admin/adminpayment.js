@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Axios from 'axios'
 import { Table,} from 'react-bootstrap';
 import '../style/adminpay.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 
@@ -35,6 +35,8 @@ const Adminpayment = () => {
                         <th >phone_no</th>
                         <th>email</th>
                         <th>Payment mode</th>
+                        <th>User UPI Id</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -48,6 +50,8 @@ const Adminpayment = () => {
                             <td>{clientdata.phone_no}</td>
                             <td>{clientdata.email}</td>
                             <td>{clientdata.pmode}</td>
+                            <td>{clientdata.upi}</td>
+
                         </tr>
                         )
                     })
@@ -56,10 +60,6 @@ const Adminpayment = () => {
                
             </Table>
 
-            <div className='net1'><span className='click'>click here for:</span>
-                <Link to="/netbanking">
-                 <button className='net'>Net banking Details</button></Link>
-                </div>
 
 
             <div className="formgg22">

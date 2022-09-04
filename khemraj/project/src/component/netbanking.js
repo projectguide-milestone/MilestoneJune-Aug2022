@@ -58,7 +58,7 @@ const Netbanking = () => {
 
             <div className="formgg22">
                 <div className="formgg2">
-                    <BsFillArrowLeftSquareFill color="aqua" fontSize={40} onClick={() => history('/adminpayment')}></BsFillArrowLeftSquareFill>
+                    <BsFillArrowLeftSquareFill color="aqua" fontSize={40} onClick={() => history('/adminhome')}></BsFillArrowLeftSquareFill>
                 </div>
             </div>
 

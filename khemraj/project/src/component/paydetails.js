@@ -20,7 +20,7 @@ const Paydetails = () => {
     }, [data]);
   return (
     <div>
-          <h1>Product Details :</h1>
+          <h1>Payment Details :</h1>
            <div>
     {
              data.map(clientdata => {
@@ -37,8 +37,9 @@ const Paydetails = () => {
                               <p class="card-text"><b>Phone number:</b>  {clientdata.phone_no}</p>
                               <p class="card-text"><b>Email id: </b> {clientdata.email}</p>
                               <p class="card-text"><b>Payed by:</b>  {clientdata.pmode}</p>
+                              <p class="card-text"><b>Payed amount:</b> Rs.5000/- </p>
 
-                              {/* <label><span className='span'><b>Status: </b></span><span className='span1'>{clientdata.aprove}</span></label> */}
+
                      </div>
                  </div>
              </div>

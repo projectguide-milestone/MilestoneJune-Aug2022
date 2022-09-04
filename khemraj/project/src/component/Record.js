@@ -52,30 +52,6 @@ export const Record = () => {
                  </tbody>
 
 
-
-                 {/* <tbody className="abc">
-                    
-                    <tr>
-                        <td><p className='abc'>Adpost</p></td>
-                        <td><p className='abc'>1585</p></td>
-                        <td><a href='details1'><button>View details</button></a></td>
-                      </tr>
-                 </tbody>
-                 
-                 <tbody className="abc">
-                    <tr>
-                        <td><p className='abc'>ClassifiedAds</p></td>
-                        <td><p className='abc'>2591</p></td>
-                        <td><a href='details2'><button>View details</button></a></td>
-                      </tr>
-                 </tbody>
-                 <tbody className="abc">
-                    <tr>
-                        <td><p className='abc'>eBay</p></td>
-                        <td><p className='abc'>4750</p></td>
-                        <td><a href='details3'><button>View details</button></a></td>
-                      </tr>
-                 </tbody> */}
                  </Table>
                  </div>
                  <br/><br/>

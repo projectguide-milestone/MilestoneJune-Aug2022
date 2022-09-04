@@ -1,13 +1,11 @@
 import React from 'react'
 import Axios from 'axios';
 import {useState} from 'react';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import '../component/style/payment.css'
 
 const Payment = () => {
 
-  // const [show, setShow] = useState(false)
 
   const [show, setShow] = useState('');
 
@@ -32,7 +30,7 @@ const Payment = () => {
 
   const addnet = () => {
     if (usname !== '' && accno !== ''){
-      if (ifsc !== '' && bname !==''){
+      if (ifsc !== '' && bname !== ''){
         Axios.post('http://localhost:3001/netpayment', {
           usname: usname,
           accno: accno,
@@ -50,7 +48,7 @@ const Payment = () => {
   const addpay = () => {
     if (name !=='' && phone_no !==''){
       if(email !=='' && pmode !==''){
-        if(uname !=='' && upi !==''){
+        // if(uname !=='' && upi !==''){
           Axios.post('http://localhost:3001/payment', {
             name: name,
             phone_no: phone_no,
@@ -64,8 +62,8 @@ const Payment = () => {
         }); 
         }else {  alert ("every filed is required")}
       }else {  alert ("every filed is required")}
-    }else {  alert ("every filed is required 111 ")}
-     
+    // }else {  alert ("every filed is required ")}
+     alert("confirm Payment:" +pmode,)
   }
 
 
@@ -74,7 +72,7 @@ const Payment = () => {
     <div>
       <div className='ppq1'>
         <div className='ppq'>
-          <form border={2} solid striped bordered hover >
+          <form border={2} solid striped bordered hover action='/success' >
             <div>
               <h2>Payment Gateway</h2>
             </div>
@@ -95,10 +93,6 @@ const Payment = () => {
             </div>
             <div>
 
-            {/* <button onClick={()=>setShow(!false)}>toggle</button>
-             {
-               show?<h3>hello</h3>:null
-             } */}
 
 
 
@@ -163,9 +157,7 @@ const Payment = () => {
                   </select>
                   <label>Amount to be paid :</label>
                   <label className='qwe11'>Rs.5000/-</label>
-                  <div>
-                    <button onClick={addnet}>ok</button>
-                  </div>
+
                 </div>
               )
             }
@@ -190,11 +182,8 @@ const Payment = () => {
             <div></div>
 
             <div className='tyu'>
-              <Link to="/success">
-              <button onClick={addpay}>submit</button>
-              </Link>
-
-              {/* <button onClick={addnet}>ok</button> */}
+              <p onClick={addnet}>
+              <button type='submit' onClick={addpay}>submit</button></p>
             </div>
           </form>
         </div>

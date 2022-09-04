@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import jwt_decode from "jwt-decode"
-// import Home from './home'
-// import Adminhome from './admin/adminhome'
 import './style/login.css'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -26,11 +24,7 @@ const [ user, setUser ] = useState({});
   document.getElementById("signInDiv").hidden = true;
     }
 
-//     function handleSignOut(event) {
-//         setUser({});
-//         document.getElementById("signInDiv").hidden = false;
-//         localStorage.removeItem('key');
-//     }
+
 
 
    useEffect(() => {
@@ -63,7 +57,6 @@ const admin = localStorage.getItem('isadmin')
         </div>
         {  Object.keys(user).length !== 0 &&
         <div>
-        {/* <button onClick={(e) => handleSignOut(e)}>Sign out</button> */}
        
 </div>
         }
@@ -83,18 +76,11 @@ const admin = localStorage.getItem('isadmin')
 
         Object.keys(user).length > 0 &&
         <div className='imgmain'>
-        {/* <Adminhome></Adminhome> */}
-        {/* <Link to="/adminhome"> */}
+
                <button onClick={() => history(`/adminhome`)} >Go to home page</button>
-               {/* </Link>  */}
         </div>
 }
 
-{/* {  Object.keys(user).length !== 0 &&
-        <div>
-
-</div>
-        } */}
 
         </div>
   ):(
@@ -139,85 +125,3 @@ export default Google
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState } from 'react'
-// import GoogleLogin from 'react-google-login';
-
-
-// const Google = () => {
-
-//     const [loginData, setLoginData] = useState(
-//         localStorage.getItem('loginData')
-//         ? JSON.parse(localStorage.getItem('loginData'))
-//         : null
-//     );
-
-
-//     const handleFailure = (result) => {
-//         alert(result);
-//     };
-
-//     const handleLogin = async (googleData) => {
-//       const res = await fetch('/api/google-login', {
-//         method: 'POST',
-//         body: JSON.stringify({
-//             token: googleData.tokenId,
-//         }),
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//       });
-
-
-//       const data = await res.json();
-//       setLoginData(data);
-//       localStorage.setItem('loginData', JSON.stringify(data));
-
-//      };
-//     const handleLogout = () => {
-//         localStorage.removeItem('loginData');
-//         setLoginData(null);
-//     };
-
-
-//   return (
-//     <div>
-//                <h1>React google login</h1>
-// <div>
-// {
-//     loginData ? (
-//         <div>
-//             <h3>You logged in as {loginData.email}</h3>
-//             <button onClick={handleLogout}>Logout</button>
-//         </div>
-//     ) : (
-//         <GoogleLogin
-//         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-//         buttonText="Log in with google"
-//         onSuccess={handleLogin}
-//         onFailure={handleFailure}
-//         cookiePolicy={'single_host_origin'}
-//         >
-//       </GoogleLogin>
-//     )
-// }
- 
-
-// </div>
-//     </div>
-//   )
-// }
-
-// export default Google

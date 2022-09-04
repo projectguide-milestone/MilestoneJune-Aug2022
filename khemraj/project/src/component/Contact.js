@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import {Link} from 'react-router-dom';
-// import { Button } from "react-bootstrap";
+
 import pic from "./WhatsApp Image.png";
 import axios from 'axios' 
 import './style/Contact.css'
@@ -15,20 +14,24 @@ const ContactForm = () => {
   const [message, setMessage] = useState("")
 
   const sendname =() =>{
-      axios.post('http://localhost:3001/insertmessage',{
+    if(name !== '' && email !== ''){
+      if(message !== ''){
+        axios.post('http://localhost:3001/insertmessage',{
           name:name,
           email:email,
           message:message
       }).then((response) => {
           alert ("updated")
       })
-
+      }else { alert("Message is required")}
+    }else { alert("Every field is required")}
+    alert ("message sent succesfully")
   }
 
 
 
   return (
-    <form>
+    <form >
     <br/><br/>
 
 
