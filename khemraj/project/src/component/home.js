@@ -1,6 +1,5 @@
 import React from 'react';
 import './style/home.css';
-// import {Link} from 'react-router-dom'
 import pic1 from '../component/download.jpg'
 import pic2 from '../component/images.jpg'
 import pic3 from '../component/images1.jpg'
@@ -19,15 +18,7 @@ export const Home = () => {
         {/* <marquee> */}
           <h1>Advertising Source Service</h1> 
           {/* </marquee> */}
-          {/* <div className='log'>
 
-            
-         <Link to="/login">
-          <button className='logout'>Logout</button></Link></div> */}
-
-        {/* <div className='pro1'>
-          <a href="profile" className="pro"><p><li>Profile</li></p></a>
-          </div> */}
           <h2>
             <a href="Record" className="as"><p><li>Agent</li></p></a>
           </h2>
@@ -37,7 +28,6 @@ export const Home = () => {
           <h2>
             <a href="paydetails" className="as"><p><li>Payment Details</li></p></a>
           </h2>
-          {/* <img className='hopi' src={pic} alt=""></img> */}
         </form>
 
         <br/><br/>

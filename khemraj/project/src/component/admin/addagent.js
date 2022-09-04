@@ -26,27 +26,28 @@ const Addagent = () => {
             history.push('/adminagent')
         })
     }else { alert ("every field is required")}
+    alert("agent created: " +name)
   }
 
 return (
   <div>
       
-      <form>
+      <form action='adminagent'>
               <div className="form-row">
                   <div className="out">
                       <label>Agent Name:
-                          <input type="text" classname="out" onChange={(event)=>{setName(event.target.value)}}></input>
+                          <input type="text" classname="out" onChange={(event)=>{setName(event.target.value)}} required></input>
                       </label>
                   </div>
                   <div className="out">
                       <label>Agent id:
-                          <input type="text" classname="out" onChange={(event)=>{setAgent_id(event.target.value)}}></input>
+                          <input type="text" classname="out" onChange={(event)=>{setAgent_id(event.target.value)}} required></input>
                       </label>
                   </div>
               </div>
               <div className="form-row">
                   <div className="form-group3">
-                      <button onClick={addagent} className="but1">ADD</button>
+                      <button type='submit' onClick={addagent} className="but1">ADD</button>
                   </div>
               </div>
           </form>

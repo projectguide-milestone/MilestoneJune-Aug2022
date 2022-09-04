@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import './style/advert.css'
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 export const Advert = () => {
@@ -34,7 +34,8 @@ export const Advert = () => {
 
   const [pic, setPic] = useState("");
 
-  // const history = useNavigate();
+  const history = useNavigate();
+
   const addproduct = () => {
     if (product_name !== '' && product_dec !== '') {
       if (agent !== '') {
@@ -45,11 +46,11 @@ export const Advert = () => {
           pic: pic
         }).then(() => {
           console.log('Successfully created client record.')
-          alert("Successfull")
-          .push('/payment')
+          history.push('/payment')
         });
       }else { alert (" select the agent")}
     }else { alert ("Every Field is requeried")}
+    alert("Your Product have sent successfully: " +product_name)
   }
 
 
@@ -60,17 +61,17 @@ export const Advert = () => {
   return (
     <div className='advtmain'>
       <div className='profil11'>
-        <form className="formtt">
+        <form className="formtt" action='/payment'>
           <div className="out">
-            <p className='type'>Product Name: <input onChange={(event) => { setProduct_name(event.target.value) }} className='inp'></input></p>
+            <p className='type'>Product Name: <input onChange={(event) => { setProduct_name(event.target.value) }} className='inp' type="text" required></input></p>
           </div>
 
           <div className='out'>
-            <p className='about'>Product declaration:<textarea onChange={(event) => { setProduct_dec(event.target.value) }} className='inp'></textarea></p>
+            <p className='about'>Product declaration:<textarea onChange={(event) => { setProduct_dec(event.target.value) }} className='inp' type="text" required></textarea></p>
           </div>
           <div className='select'>
             <p className='out'>select:
-              <select onChange={(event) => { setAgent(event.target.value) }}>
+              <select onChange={(event) => { setAgent(event.target.value) }} required>
                 {
                   data.map(clientdata => {
                     return (
@@ -88,7 +89,7 @@ export const Advert = () => {
 
             <label className='lkk' for="image2">Product Picture</label>
           </div>
-          <input type="file" onClick={handleChange} onChange={(event) => { setPic(event.target.value) }} />
+          <input type="file" onClick={handleChange} onChange={(event) => { setPic(event.target.value) }} required/>
           <div className='hbg'>
               <button type="submit" className='but' onClick={addproduct} >Upload</button>
           </div>

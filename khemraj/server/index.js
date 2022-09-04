@@ -9,8 +9,6 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
-// app.use(cors());
-// app.use(express.json());
 
 
 dotenv.config();
@@ -178,18 +176,6 @@ app.put('/aprj', (req,res)=>{
     }
 )
 
-// app.post('/aprj',(req,result)=>{
-//     // const id= req.body.id;
-
-//     const aprove= req.body.aprove;
-
-//     db.query('INSERT INTO proname (aprove) VALUES (?)', [aprove],
-//     (err,res)=>{
-//         if (err)
-//         {console.log(err)}
-
-//     });
-// })
 
 
 app.post('/createagent',(req,result)=>{
@@ -446,15 +432,15 @@ app.post('/register', (req, res) => {
 
 
 
-// app.get('/login', (req,res) => {
-//     console.log("getting called")
-//     if (req.session.name) {
-//         console.log("user exist");
-//         res.send({ loggedIn: true, name: req.session.name});
-//     } else {
-//         res.send({ loggedIn: false});
-//     }
-// });
+app.get('/login', (req,res) => {
+    console.log("getting called")
+    if (req.session.name) {
+        console.log("user exist");
+        res.send({ loggedIn: true, name: req.session.name});
+    } else {
+        res.send({ loggedIn: false});
+    }
+});
 
 app.post('/userLogin', (req, res) => {
     const name = req.body.name;

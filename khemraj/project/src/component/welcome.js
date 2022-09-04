@@ -18,8 +18,6 @@ export const Welcome = () => {
          <button type="submit" classname="bkhem">login here</button>
          </Link>
 
-         {/* <Link to="/adminlogin">
-         <button type="submit" classname="bkhem2">Admin login</button></Link> */}
       
      </div>
      </div>
