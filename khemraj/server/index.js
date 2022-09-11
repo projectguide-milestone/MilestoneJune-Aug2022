@@ -185,8 +185,9 @@ app.post('/createagent',(req,result)=>{
 
     const agent_id= req.body.agent_id;
 
+    const about= req.body.about;
 
-    db.query('INSERT INTO agent (id, name, agent_id) VALUES (?,?,?)', [id, name, agent_id],
+    db.query('INSERT INTO agent (id, name, agent_id, about) VALUES (?,?,?,?)', [id, name, agent_id, about],
     (err,res)=>{
         if (err)
         {console.log(err)}
@@ -368,7 +369,9 @@ app.put('/updateagent', (req,res)=>{
 
     const agent_id= req.body.agent_id;
 
-    db.query('UPDATE agent SET name=?, agent_id=? WHERE id=? ', [name, agent_id, id], (error, result)=>{
+    const about= req.body.about;
+
+    db.query('UPDATE agent SET name=?, agent_id=?, about=? WHERE id=? ', [name, agent_id, about, id], (error, result)=>{
         if (error)
         {console.log(error)}
     } )
