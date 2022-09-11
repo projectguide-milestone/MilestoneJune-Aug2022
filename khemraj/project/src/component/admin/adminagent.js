@@ -51,6 +51,7 @@ const Adminagent = () => {
                     <tr>
                         <th>Agent Name</th>
                         <th>Agent Id</th>
+                        <th>About Agent</th>
                         <th>Update</th>
                         <th>delete</th>
                     </tr>
@@ -62,6 +63,7 @@ const Adminagent = () => {
                     <tr>
                         <td><p className='abc'>{clientdata.name}</p></td>
                         <td><p className='abc'>{clientdata.agent_id}</p></td>
+                        <td><p className='abc'>{clientdata.about}</p></td>
                         <td><button onClick={() => history(`/updateagent/${clientdata.id}`)} >Edit</button></td>
                         <td><button onClick={(e) => deleterecord(e,clientdata.id)}>Delete</button></td>
                       </tr>

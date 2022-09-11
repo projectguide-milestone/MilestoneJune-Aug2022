@@ -7,7 +7,9 @@ export const Welcome = () => {
   return (
   <form>
 <div className='wel'>
+          <marquee>
   Welcome to Advertising Source Service
+          </marquee>
 </div>
 <div className="ww">
     <div class="welcome">

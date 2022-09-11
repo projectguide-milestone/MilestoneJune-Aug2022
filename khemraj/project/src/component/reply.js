@@ -2,7 +2,7 @@ import React from 'react'
 import Axios from 'axios'
 import {useState, useEffect} from 'react';
 import '../component/style/Record.css'
-
+import pic from '../component/img1.jpg'
 
 const Reply = () => {
 
@@ -32,7 +32,8 @@ const Reply = () => {
          <div class="row">
              <div class="col-4">
                 <div class="card" >
-                    <img src={clientdata.pic} className="iiii" class="card-img-top card-image" alt="..." />
+                    <img className="iiii" src={pic} alt=''></img>
+                    {/* <img src={clientdata.pic} className="iiii" class="card-img-top card-image" alt="..." /> */}
                      <div class="card-body ms-1">
                          <h3>{clientdata.product_name}</h3>
                               <p class="card-text">{clientdata.product_dec}</p>
